@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -64,6 +62,18 @@ return {
         ["<Leader>b"] = { desc = "Buffers" },
         -- quick save
         -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+
+        -- CUSTOM MAPPINGS
+        ["<C-d>"] = { "<C-d>zz", desc = "Move vertical-down and center" },
+        ["<C-u>"] = { "<C-u>zz", desc = "Move vertical-up and center" },
+        -- Spectre
+        ["<leader>s"] = { desc = "󰛔 Search/Replace" },
+        ["<leader>ss"] = { function() require("spectre").open() end, desc = "Spectre" },
+        ["<leader>sf"] = { function() require("spectre").open_file_search() end, desc = "Spectre (current file)" },
+        ["<leader>sw"] = {
+          function() require("spectre").open_visual { select_word = true } end,
+          desc = "Spectre (current word)",
+        },
       },
       t = {
         -- setting a mapping to false will disable it

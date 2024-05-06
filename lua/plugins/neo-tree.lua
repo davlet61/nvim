@@ -17,7 +17,12 @@ return {
     opts.group_empty_dirs = true
     opts.window = {
       position = "right",
-      -- width = "100%",
+      mappings = {
+        h = "parent_or_close",
+        l = "child_or_open",
+        O = "system_open",
+        o = "open",
+      },
     }
     return opts
   end,
