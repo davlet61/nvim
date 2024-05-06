@@ -78,6 +78,9 @@ return {
       t = {
         -- setting a mapping to false will disable it
         -- ["<esc>"] = false,
+        -- Terminal mode mappings
+        ["<Esc>q"] = { "<C-\\><C-n>", desc = "Exit terminal mode" },
+        ["<Esc><Esc>"] = { '<C-\\><C-n><cmd>lua require("toggleterm").toggle()<CR>', desc = "Toggle terminal mode" },
       },
     },
   },
