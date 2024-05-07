@@ -1,5 +1,6 @@
 return {
   "nvim-treesitter/nvim-treesitter-context",
+  event = "User AstroFile",
   vim.keymap.set(
     "n",
     "[c",

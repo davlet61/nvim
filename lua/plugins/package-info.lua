@@ -1,6 +1,6 @@
 return {
   "vuki656/package-info.nvim",
-  event = "VeryLazy",
+  event = "BufRead package.json",
   dependencies = { "MunifTanjim/nui.nvim" },
   config = function()
     local package_info = require "package-info"

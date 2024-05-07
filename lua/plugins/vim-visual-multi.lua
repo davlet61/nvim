@@ -1,12 +1,12 @@
 return {
-  'mg979/vim-visual-multi',
-  event = 'BufEnter',
+  "mg979/vim-visual-multi",
+  event = "User AstroFile",
   config = function()
-    vim.g.VM_theme = 'ocean'
+    vim.g.VM_theme = "ocean"
     -- vim-visual-multi keymaps
     vim.g.VM_maps = {
-      ['Add Cursor Up'] = '<C-k>',
-      ['Add Cursor Down'] = '<C-j>',
+      ["Add Cursor Up"] = "<C-k>",
+      ["Add Cursor Down"] = "<C-j>",
     }
 
     -- vim.g.VM_highlight_matches = ''
