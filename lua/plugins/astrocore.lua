@@ -74,6 +74,16 @@ return {
           function() require("spectre").open_visual { select_word = true } end,
           desc = "Spectre (current word)",
         },
+
+        -- Open Alpha Automatically When No More Buffers
+        ["<Leader>c"] = {
+          function()
+            local bufs = vim.fn.getbufinfo { buflisted = true }
+            require("astrocore.buffer").close(0)
+            if require("astrocore").is_available "alpha-nvim" and not bufs[2] then require("alpha").start() end
+          end,
+          desc = "Close buffer",
+        },
       },
       t = {
         -- setting a mapping to false will disable it
