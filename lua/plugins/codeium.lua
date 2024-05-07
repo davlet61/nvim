@@ -1,6 +1,6 @@
 return {
   {
     "Exafunction/codeium.vim",
-    event = "BufRead",
+    event = "BufEnter",
   },
 }
