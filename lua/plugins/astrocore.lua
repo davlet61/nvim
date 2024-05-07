@@ -94,7 +94,7 @@ return {
 
         -- Gitsigns
         ["<leader>gh"] = false,
-        ["<leader>hr"] = { require("gitsigns").stage_hunk, desc = "Reset Git Hunk" },
+        ["<leader>hr"] = { function() require("gitsigns").reset_hunk() end, desc = "Reset Git Hunk" },
       },
       t = {
         -- setting a mapping to false will disable it
