@@ -88,6 +88,13 @@ return {
           end,
           desc = "Close buffer",
         },
+
+        -- Alpha
+        ["<Leader>h"] = false,
+
+        -- Gitsigns
+        ["<leader>gh"] = false,
+        ["<leader>hr"] = { require("gitsigns").stage_hunk, desc = "Reset Git Hunk" },
       },
       t = {
         -- setting a mapping to false will disable it
