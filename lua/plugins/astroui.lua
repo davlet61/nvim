@@ -30,6 +30,7 @@ return {
           CursorLineFold = { link = "CursorLineNr" }, -- highlight fold indicator as well as line number
           GitSignsCurrentLineBlame = { fg = nontext.fg, italic = true }, -- italicize git blame virtual text
           HighlightURL = { underline = true }, -- always underline URLs
+          MatchParen = { fg = "white", bg = red, bold = true, italic = true },
 
           -- Telescope
           TelescopeBorder = { fg = bg_alt, bg = float_bg },
