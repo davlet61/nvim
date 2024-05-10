@@ -15,10 +15,5 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
--- set highlight color for illuminated words
-vim.api.nvim_set_hl(0, "IlluminatedWordText", { link = "Visual" })
-vim.api.nvim_set_hl(0, "IlluminatedWordRead", { link = "Visual" })
-vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { link = "Visual" })
-
 require "lazy_setup"
 require "polish"

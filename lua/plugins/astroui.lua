@@ -26,11 +26,19 @@ return {
         -- vim.api.nvim_out_write(vim.inspect(get_hlgroup("NormalFloat").fg) .. "\n")
 
         -- return a table of highlights for telescope based on colors gotten from highlight groups
+
         return {
           CursorLineFold = { link = "CursorLineNr" }, -- highlight fold indicator as well as line number
           GitSignsCurrentLineBlame = { fg = nontext.fg, italic = true }, -- italicize git blame virtual text
           HighlightURL = { underline = true }, -- always underline URLs
+
+          -- MatchParen
           MatchParen = { fg = "white", bg = red, bold = true, italic = true },
+
+          -- Illuminate plugin
+          IlluminatedWordText = { link = "Visual" },
+          IlluminatedWordRead = { link = "Visual" },
+          IlluminatedWordWrite = { link = "Visual" },
 
           -- Telescope
           TelescopeBorder = { fg = bg_alt, bg = float_bg },
