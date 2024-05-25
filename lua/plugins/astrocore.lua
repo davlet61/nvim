@@ -95,6 +95,13 @@ return {
         -- Gitsigns
         ["<leader>gh"] = false,
         ["<leader>hr"] = { function() require("gitsigns").reset_hunk() end, desc = "Reset Git Hunk" },
+
+        -- Toggleterm
+        ["<leader>ts"] = { function() require("astrocore").toggle_term_cmd "spf ." end, desc = "Toggle superfile" },
+        ["<leader>td"] = {
+          function() require("astrocore").toggle_term_cmd "lazydocker" end,
+          desc = "Toggle lazydocker",
+        },
       },
       t = {
         -- setting a mapping to false will disable it
