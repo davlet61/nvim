@@ -102,6 +102,10 @@ return {
           function() require("astrocore").toggle_term_cmd "lazydocker" end,
           desc = "Toggle lazydocker",
         },
+
+        -- REST client
+        ["<leader>rr"] = { ":Rest run<CR>", desc = "Run REST request" },
+        ["<leader>rl"] = { ":Rest run last<CR>", desc = "Run REST request" },
       },
       t = {
         -- setting a mapping to false will disable it
