@@ -102,10 +102,26 @@ return {
           function() require("astrocore").toggle_term_cmd "lazydocker" end,
           desc = "Toggle lazydocker",
         },
+        ["<leader>tg"] = {
+          function() require("astrocore").toggle_term_cmd "gh dash" end,
+          desc = "Toggle Github Dashboard",
+        },
 
         -- REST client
         ["<leader>rr"] = { ":Rest run<CR>", desc = "Run REST request" },
         ["<leader>rl"] = { ":Rest run last<CR>", desc = "Run REST request" },
+
+        -- Diffview
+        ["<leader><leader>v"] = {
+          function()
+            if next(require("diffview.lib").views) == nil then
+              vim.cmd "DiffviewOpen"
+            else
+              vim.cmd "DiffviewClose"
+            end
+          end,
+          desc = "Reset Git Hunk",
+        },
       },
       t = {
         -- setting a mapping to false will disable it
