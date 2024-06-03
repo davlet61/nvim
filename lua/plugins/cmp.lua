@@ -1,5 +1,8 @@
 return {
   "hrsh7th/nvim-cmp",
+  dependencies = {
+    { "kristijanhusak/vim-dadbod-completion", ft = { "sql", "mysql", "plsql" }, lazy = true },
+  },
   config = function(_, opts)
     local cmp = require "cmp"
 
