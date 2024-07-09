@@ -13,6 +13,7 @@ return {
       "sql",
       "typescript",
       "vim",
+      "xml",
     })
   end,
 }

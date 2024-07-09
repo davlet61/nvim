@@ -109,7 +109,7 @@ return {
 
         -- REST client
         ["<leader>rr"] = { ":Rest run<CR>", desc = "Run REST request" },
-        ["<leader>rl"] = { ":Rest run last<CR>", desc = "Run REST request" },
+        ["<leader>rl"] = { ":Rest run last<CR>", desc = "Run REST last request" },
 
         -- Diffview
         ["<leader><leader>v"] = {
