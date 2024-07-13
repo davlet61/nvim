@@ -17,3 +17,23 @@ end
 
 require "lazy_setup"
 require "polish"
+
+-- Save macro to register c
+-- vim.api.nvim_set_var("c", "yiwoconsole.log('@p ==> ', @p);")
+-- Load macro on VimEnter
+-- vim.cmd [[
+--   autocmd VimEnter * execute 'normal! let @c="yiwoconsole.log(@p);'
+-- ]]
+
+-- Define the autocmd group
+-- local augroup = vim.api.nvim_create_augroup("ConsoleLogYank", { clear = true })
+--
+-- -- Define the autocmd
+-- vim.api.nvim_create_autocmd("TextYankPost", {
+--   group = augroup,
+--   pattern = "*",
+--   callback = function()
+--     local yanked_text = vim.fn.getreg '"'
+--     vim.api.nvim_set_var("c", "console.log(' ==> ', '" .. vim.fn.escape(yanked_text, "'") .. "');")
+--   end,
+-- })
